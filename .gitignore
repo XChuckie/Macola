@@ -146,7 +146,8 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 
-
+### Hide PROJECT infomation ###
 /Macola.drawio
-# /macola-frontend
 
+### Hide macola-backend infomation ###
+macola-backend/src/main/resources/application-local.yml
