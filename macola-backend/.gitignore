@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Hide macola-backend infomation ###
+#macola-backend/src/main/resources/application-local.yml

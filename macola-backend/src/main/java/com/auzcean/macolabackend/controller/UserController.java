@@ -151,7 +151,7 @@ public class UserController {
     @PostMapping("/update/")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public BaseResponse<Boolean> updateUser(@RequestBody UserUpdateRequest userUpdateRequest) {
-        ThrowUtils.throwIf(userUpdateRequest == null, ErrorCode.PARAMS_ERROR);
+        ThrowUtils.throwIf(userUpdateRequest.getId() <= 0, ErrorCode.PARAMS_ERROR, "更新参数不能全为空！");
 
         User user = new User();
         BeanUtils.copyProperties(userUpdateRequest, user);

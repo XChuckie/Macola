@@ -148,6 +148,3 @@ fabric.properties
 
 ### Hide PROJECT infomation ###
 /Macola.drawio
-
-### Hide macola-backend infomation ###
-macola-backend/src/main/resources/application-local.yml
