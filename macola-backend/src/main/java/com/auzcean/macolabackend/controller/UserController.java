@@ -108,7 +108,7 @@ public class UserController {
     }
 
     /**
-     * 根据 id 获取用户（仅管理员）
+     * 根据 id 获取用户（管理员）
      * @return 返回不脱敏数据
      */
     @GetMapping("/get/")
@@ -133,7 +133,7 @@ public class UserController {
     }
 
     /**
-     * 删除用户（仅管理员）
+     * 删除用户（管理员）
      */
     @PostMapping("/delete/")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
@@ -146,7 +146,7 @@ public class UserController {
     }
 
     /**
-     * 更新用户（仅管理员）
+     * 更新用户（管理员）
      */
     @PostMapping("/update/")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
@@ -162,7 +162,7 @@ public class UserController {
     }
 
     /**
-     * 用户分页查询
+     * 分页查询（管理员）
      */
     @PostMapping("/list/page/vo")
     @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
