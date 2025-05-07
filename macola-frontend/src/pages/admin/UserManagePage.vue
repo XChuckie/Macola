@@ -73,7 +73,7 @@
             <span v-else>
               <a @click="edit(record.id)">编辑</a>
             </span>
-            <a-button danger @click="doDelete(record.id)">删除</a-button>
+            <a-button type="link" danger @click="doDelete(record.id)">删除</a-button>
           </a-space>
         </template>
       </template>

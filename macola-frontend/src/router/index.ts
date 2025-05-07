@@ -10,7 +10,11 @@ import {
   DashboardOutlined,
   CodeSandboxOutlined,
   GithubOutlined,
+  FireOutlined,
 } from '@ant-design/icons-vue'
+import addPicturePage from '@/pages/AddPicturePage.vue'
+import PictureManagePage from '@/pages/admin/PictureManagePage.vue'
+import pictureDetailPage from '@/pages/PictureDetailPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,9 +45,36 @@ const router = createRouter({
       },
     },
     {
+      path: '/addPicture',
+      name: '创建图片',
+      component: addPicturePage,
+      meta: {
+        icon: () => h(FireOutlined),
+        access: ACCESS_ENUM.ADMIN,
+      },
+    },
+    {
+      path: '/picture/:id',
+      name: '图片详情',
+      component: pictureDetailPage,
+      props: true,
+      meta: {
+        hiddenMenu: true, // 默认隐藏
+      },
+    },
+    {
       path: '/admin/userManage',
       name: '用户管理',
       component: UserManagePage,
+      meta: {
+        icon: () => h(DashboardOutlined),
+        access: ACCESS_ENUM.ADMIN,
+      },
+    },
+    {
+      path: '/admin/pictureManage',
+      name: '图片管理',
+      component: PictureManagePage,
       meta: {
         icon: () => h(DashboardOutlined),
         access: ACCESS_ENUM.ADMIN,
